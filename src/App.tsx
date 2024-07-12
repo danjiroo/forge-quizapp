@@ -1,11 +1,14 @@
-import "./App.css";
+import { Home, Quiz, Results } from '@/components/'
 
-function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Happy coding and good luck! 🌟
-    </h1>
-  );
+import { useAppSelector } from '@/store'
+
+const App: React.FC = () => {
+  const quizReducer = useAppSelector(({ quizReducer }) => quizReducer)
+
+  if (quizReducer.currentPage === 'quiz') return <Quiz />
+  if (quizReducer.currentPage === 'results') return <Results />
+
+  return <Home />
 }
 
-export default App;
+export default App

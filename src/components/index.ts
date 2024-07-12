@@ -1,0 +1,5 @@
+export { default as Home } from './Home'
+export { default as Question } from './Question'
+export { default as Questions } from './Questions'
+export { default as Quiz } from './Quiz'
+export { default as Results } from './Results'
